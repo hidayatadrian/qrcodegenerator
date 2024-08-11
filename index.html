@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body class="">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <div class="text-xl font-bold text-gray-800">
+          <a href="#">MyLogo</a>
+        </div>
+      </div>
+    </header>
+    <div class="bg-gray-100 flex items-center justify-center min-h-screen px-5">
+      <div
+        class="max-w-sm w-full bg-white shadow-lg rounded-lg overflow-hidden"
+      >
+        <!-- Card Header -->
+        <div class="bg-blue-500 p-4">
+          <h2 class="text-white text-xl font-semibold">QR Code Generator</h2>
+        </div>
+
+        <!-- Card Body -->
+        <div class="p-6">
+          <form class="w-full max-w-sm">
+            <div class="flex items-center border-b border-teal-500 py-2">
+              <input
+                class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                type="text"
+                placeholder="https://twitter.com/example"
+                aria-label="Full name"
+              />
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Generate
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="bg-gray-100 p-4 flex justify-center hidden" id="card-footer">
+          <div id="qrcode" class="p-6 h-32 my-16 items-center"> 
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
